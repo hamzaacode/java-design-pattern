@@ -1,7 +1,5 @@
 package com.example.shallowcopy.basiccar;
 
-import javax.management.BadAttributeValueExpException;
-
 public class CarClient {
 
     public static void main(String[] args) {

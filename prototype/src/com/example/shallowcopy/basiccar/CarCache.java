@@ -1,6 +1,5 @@
 package com.example.shallowcopy.basiccar;
 
-import java.util.HashMap;
 import java.util.Hashtable;
 
 public class CarCache {
