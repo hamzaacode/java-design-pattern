@@ -1,4 +1,4 @@
-package com.example.lazyinitialization;
+package com.example.doublechecklocking;
 
 
 // Must have to be a Singletone:
@@ -7,15 +7,21 @@ package com.example.lazyinitialization;
 // A static factory method for obtaining the instance
 
 // Uses of singletone : loggings , Driver object , Database connection obj, caching , thread pool,
-public class Singletone {
-    private static Singletone instance;
+public class DoubleCheckLockingSingletone {
+    private static DoubleCheckLockingSingletone instance;
     private String info = "Initial info class";
-    private Singletone() {
+
+    private DoubleCheckLockingSingletone() {
 
     }
-    public static Singletone getInstance() {
+
+    public static DoubleCheckLockingSingletone getInstance() {
         if (instance == null) {
-            instance = new Singletone();
+            synchronized (DoubleCheckLockingSingletone.class) {
+                if (instance == null) {
+                    instance = new DoubleCheckLockingSingletone();
+                }
+            }
         }
         return instance;
     }
