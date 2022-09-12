@@ -1,7 +1,5 @@
 package com.example.adapter;
 
-import javax.smartcardio.Card;
-
 public class CardReaderAdapter implements MemoryCard { //CardReader is adapter
     Laptop laptop;  // adaptee or wall socket
 

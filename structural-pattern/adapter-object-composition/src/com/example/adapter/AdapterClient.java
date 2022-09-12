@@ -1,7 +1,5 @@
 package com.example.adapter;
 
-import java.util.*;
-
 public class AdapterClient {
 
     public static void main(String[] args) {
